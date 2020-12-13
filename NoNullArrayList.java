@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 class NoNullArrayList<T> extends ArrayList<T>{
   public T set(int i, T x){
     if(x == null){
@@ -33,6 +32,4 @@ class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int size){
     super(size);
   }
-
-
 }
