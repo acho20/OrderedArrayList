@@ -8,4 +8,7 @@ class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
     }
     return super.add(x);
   }
+  public void add (int index, T x){
+    add(x);
+  }
 }
