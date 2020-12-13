@@ -9,4 +9,13 @@ class NoNullArrayList<T> extends ArrayList<T>{
       return super.set(i,x);
     }
   }
+
+  public boolean add (T e){
+    if (e == null){
+      throw new IllegalArgumentException();
+    }else{
+      return super.add(e);
+    }
+  }
+
 }
