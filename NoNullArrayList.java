@@ -10,11 +10,19 @@ class NoNullArrayList<T> extends ArrayList<T>{
     }
   }
 
-  public boolean add (T e){
-    if (e == null){
+  public boolean add (T x){
+    if (x == null){
       throw new IllegalArgumentException();
     }else{
-      return super.add(e);
+      return super.add(x);
+    }
+  }
+
+  public void add(int index, T x){
+    if(x == null){
+      throw new IllegalArgumentException();
+    }else{
+      super.add(index, x);
     }
   }
 
