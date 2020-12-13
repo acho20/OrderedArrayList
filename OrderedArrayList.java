@@ -1,5 +1,9 @@
 class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
   public boolean add(T x){
+    if(x == null){
+      throw new IllegalArgumentException();
+    }
+
     for(int i = 0; i < super.size(); i++){
       if(x.compareTo(super.get(i)) < 0){
         super.add(i, x);
@@ -14,6 +18,9 @@ class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
   }
 
   public T set(int i, T x){
+    if(x == null){
+      throw new IllegalArgumentException();
+    }
     T a = super.get(i);
     super.remove(i);
     add(x);
